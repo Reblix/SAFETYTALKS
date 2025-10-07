@@ -1,0 +1,278 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Safety Talks — I Fórum de Discussões em SST</title>
+  <meta name="description" content="Participe do I Fórum de Discussões em SST — Safety Talks. Dia 08 de novembro, das 08h às 18h, no Atrium Confort Hotel, Parauapebas-PA. Inscrições abertas!" />
+  <meta property="og:title" content="Safety Talks — I Fórum de Discussões em SST" />
+  <meta property="og:description" content="Tecnologia, Gestão, Auditorias e Higiene Ocupacional na mineração paraense. Inscreva-se agora." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/local_atrium.jpg" />
+  <style>
+    :root{
+      --bg:#0b1014;
+      --card:#121a21;
+      --muted:#7da18d;
+      --accent:#1ed760;
+      --accent-2:#1bbf84;
+      --text:#e7f0eb;
+      --text-2:#b9c7c1;
+      --shadow: 0 10px 30px rgba(0,0,0,.3);
+      --radius:20px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Ubuntu,Inter,Arial,"Noto Sans",sans-serif;
+      color:var(--text);
+      background: radial-gradient(1200px 600px at 10% -10%, rgba(30,215,96,.15), transparent 60%),
+                  radial-gradient(1000px 500px at 90% 0%, rgba(27,191,132,.12), transparent 60%),
+                  var(--bg);
+      line-height:1.55;
+      scroll-behavior:smooth;
+    }
+    a{color:var(--accent-2);text-decoration:none}
+    .container{width:min(1100px, 92vw); margin:0 auto;}
+    header{
+      position:sticky;top:0;z-index:50;
+      background:rgba(11,16,20,.75); backdrop-filter: blur(10px);
+      border-bottom:1px solid rgba(255,255,255,.06);
+    }
+    .nav{display:flex; align-items:center; justify-content:space-between; padding:.9rem 0;}
+    .brand{display:flex;gap:.6rem; align-items:center; font-weight:700; letter-spacing:.4px}
+    .brand .dot{width:12px;height:12px;border-radius:50%;background:var(--accent-2);}
+    .nav a.btn{padding:.7rem 1rem; border-radius:12px; background:linear-gradient(135deg,var(--accent),var(--accent-2)); color:#0a0f0d; font-weight:700}
+    .hero{padding: clamp(3rem, 6vw, 6rem) 0 2rem;}
+    .hero-grid{display:grid; gap:2rem; grid-template-columns: 1.1fr .9fr;}
+    .badge{display:inline-flex;align-items:center;gap:.5rem;background:rgba(30,215,96,.12);
+      border:1px solid rgba(30,215,96,.25); color:var(--accent); padding:.4rem .7rem; border-radius:999px; font-weight:600; font-size:.9rem}
+    h1{font-size: clamp(1.9rem, 4.5vw, 3rem); margin:.6rem 0 1rem; line-height:1.15}
+    .lead{font-size: clamp(1rem, 2.2vw, 1.18rem); color:var(--text-2); margin-bottom:1.5rem}
+    .kpis{display:grid; grid-template-columns: repeat(3,1fr); gap:1rem; margin:1.6rem 0 0}
+    .kpi{background:rgba(255,255,255,.03); border:1px solid rgba(255,255,255,.07); border-radius:16px; padding:1rem 1rem}
+    .kpi strong{display:block; font-size:1.2rem}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02)); border:1px solid rgba(255,255,255,.08); box-shadow:var(--shadow); border-radius:var(--radius);}
+    .form-card{padding:1.25rem}
+    form .row{display:grid; grid-template-columns:1fr 1fr; gap:1rem}
+    form label{font-weight:600; font-size:.95rem}
+    input, select, textarea{
+      width:100%; padding:.9rem .95rem; border-radius:12px;
+      border:1px solid rgba(255,255,255,.12); background:#0e151a; color:var(--text);
+      outline:none; transition:.2s border-color, .2s box-shadow;
+    }
+    input:focus, select:focus, textarea:focus{border-color:var(--accent); box-shadow:0 0 0 3px rgba(30,215,96,.18)}
+    textarea{min-height:110px; resize:vertical}
+    .legal{font-size:.9rem; color:var(--text-2)}
+    button[type="submit"]{
+      background:linear-gradient(135deg,var(--accent),var(--accent-2));
+      border:0; color:#08110d; font-weight:800; letter-spacing:.3px;
+      padding:1rem 1.1rem; border-radius:14px; cursor:pointer; width:100%;
+      display:inline-flex; align-items:center; justify-content:center; gap:.6rem;
+    }
+    button[disabled]{opacity:.7; cursor:not-allowed}
+    section{padding:3rem 0}
+    .grid-3{display:grid; grid-template-columns: repeat(3,1fr); gap:1.2rem}
+    .topic{padding:1rem 1.1rem}
+    .topic h3{margin:.2rem 0 .4rem; font-size:1.1rem}
+    .sponsors-grid{display:grid; grid-template-columns: repeat(3,1fr); gap:1rem}
+    .sponsor-card{padding:1rem; background:rgba(255,255,255,.03); border:1px solid rgba(255,255,255,.06); border-radius:16px; text-align:center}
+    .sponsor-card img{width:100%; height:160px; object-fit:cover; border-radius:12px}
+    .sponsor-card h4{margin:.7rem 0 .2rem}
+    .gallery-grid{display:grid; grid-template-columns: repeat(3,1fr); gap:1rem}
+    .gallery-grid img{width:100%; border-radius:16px; height:220px; object-fit:cover; cursor:pointer}
+    .footer{padding:2.2rem 0; border-top:1px solid rgba(255,255,255,.06); color:var(--text-2); font-size:.95rem}
+    .map{border:0; width:100%; height:320px; border-radius:16px; filter:grayscale(.2) contrast(1.05)}
+    .floating-cta{position:fixed; right:14px; bottom:14px; z-index:60; background:linear-gradient(135deg,var(--accent),var(--accent-2)); color:#062017; border-radius:999px; padding:.9rem 1rem; font-weight:800; box-shadow: var(--shadow);}
+    /* Lightbox */
+    .lightbox{position:fixed; inset:0; background:rgba(0,0,0,.85); display:none; align-items:center; justify-content:center; z-index:100}
+    .lightbox.open{display:flex}
+    .lightbox img{max-width:min(96vw,1200px); max-height:90vh; border-radius:16px}
+    .lightbox button{position:absolute; top:14px; right:14px; background:rgba(255,255,255,.12); border:1px solid rgba(255,255,255,.3); color:#fff; padding:.6rem .8rem; border-radius:10px; cursor:pointer}
+    @media (max-width: 980px){
+      .hero-grid{grid-template-columns:1fr}
+      .kpis{grid-template-columns: 1fr 1fr}
+      form .row{grid-template-columns:1fr}
+      .grid-3{grid-template-columns:1fr}
+      .sponsors-grid{grid-template-columns:1fr}
+      .gallery-grid{grid-template-columns:1fr 1fr}
+    }
+    @media (max-width: 620px){
+      .gallery-grid{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand"><span class="dot"></span><span>Safety Talks</span></div>
+      <nav>
+        <a href="#inscricao" class="btn">Inscreva-se</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="badge">I Fórum de Discussões em SST</span>
+          <h1>Segurança em movimento: tecnologia, gestão e higiene ocupacional na mineração paraense.</h1>
+          <p class="lead">
+            Um dia inteiro de conteúdo estratégico, casos práticos e networking para líderes de SSMA, técnicos de segurança, engenheiros e profissionais que querem elevar a cultura de segurança.
+          </p>
+          <div class="kpis">
+            <div class="kpi"><strong>08 de Novembro</strong><span>08:00 → 18:00</span></div>
+            <div class="kpi"><strong>Atrium Confort Hotel</strong><span>Av. Liberdade, 192 — Parauapebas-PA</span></div>
+            <div class="kpi"><strong>Vagas Limitadas</strong><span>Inscrições mediante confirmação</span></div>
+          </div>
+        </div>
+        <div class="card form-card" id="inscricao">
+          <h2 style="margin:.2rem 0 1rem">Garanta sua vaga</h2>
+          <form id="inscricaoForm" action="https://formsubmit.co/reblinfelipe@gmail.com" method="POST">
+            <input type="hidden" name="_subject" value="Inscrição — Safety Talks (I Fórum de Discussões em SST)" />
+            <input type="hidden" name="_next" value="https://nubank.com.br/cobrar/12i520/68e51f8a-1bdf-4bc9-936c-b0d0c363cc48" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_template" value="table" />
+            <div class="row">
+              <div>
+                <label for="nome">Nome completo</label>
+                <input id="nome" name="nome" placeholder="Seu nome completo" required />
+              </div>
+              <div>
+                <label for="email">E-mail</label>
+                <input id="email" name="email" type="email" placeholder="voce@empresa.com" required />
+              </div>
+            </div>
+            <div class="row">
+              <div>
+                <label for="whats">Telefone/WhatsApp</label>
+                <input id="whats" name="whatsapp" inputmode="tel" placeholder="(xx) xxxxx-xxxx" />
+              </div>
+              <div>
+                <label for="empresa">Empresa / Organização</label>
+                <input id="empresa" name="empresa" placeholder="Nome da empresa" />
+              </div>
+            </div>
+            <div class="row">
+              <div>
+                <label for="cargo">Cargo / Área</label>
+                <input id="cargo" name="cargo" placeholder="Ex.: Eng. de Segurança, Téc. de Segurança..." />
+              </div>
+              <div>
+                <label for="interesse">Interesse principal</label>
+                <select id="interesse" name="interesse">
+                  <option value="Tecnologia e Inovação">Tecnologia e Inovação</option>
+                  <option value="Gestão de Segurança">Gestão de Segurança</option>
+                  <option value="Auditorias em SST">Auditorias em SST</option>
+                  <option value="Higiene Ocupacional">Higiene Ocupacional</option>
+                </select>
+              </div>
+            </div>
+            <div>
+              <label for="mensagem">Mensagem (opcional)</label>
+              <textarea id="mensagem" name="mensagem" placeholder="Conte-nos suas expectativas ou dúvidas."></textarea>
+            </div>
+            <div style="margin:.6rem 0 1rem">
+              <label class="legal">
+                <input type="checkbox" required style="transform:translateY(2px); margin-right:.4rem"> 
+                Concordo com o tratamento dos meus dados para fins de inscrição e comunicação do evento (LGPD).
+              </label>
+            </div>
+            <button id="btnSubmit" type="submit" aria-live="polite">Enviar inscrição e ir para a página de confirmação</button>
+            <p class="legal" style="margin-top:.8rem">Após enviar, você será direcionado automaticamente para a página de confirmação.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="grid-3">
+          <div class="card topic">
+            <h3>Tecnologia &amp; Inovação</h3>
+            <p>Novos rumos da segurança na mineração: digitalização de processos, automações e dados a serviço do campo.</p>
+          </div>
+          <div class="card topic">
+            <h3>Da Gestão à Ponta</h3>
+            <p>Como fortalecer a cultura de segurança: rituais, liderança e engajamento efetivo nas frentes de trabalho.</p>
+          </div>
+          <div class="card topic">
+            <h3>Auditorias &amp; Excelência</h3>
+            <p>Ir além da conformidade: auditorias que geram valor, aprendizado e melhoria contínua.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="sponsors">
+      <div class="container">
+        <h2 id="sponsors" style="margin:0 0 1rem">Patrocinadores</h2>
+        <div class="sponsors-grid">
+          <div class="sponsor-card">
+            <img src="assets/patrocinador_abho.jpg" alt="ABHO — Patrocinador Oficial do Safety Talks" loading="lazy" />
+            <h4>ABHO</h4>
+            <p class="legal">Associação Brasileira de Higienistas Ocupacionais</p>
+          </div>
+          <div class="sponsor-card">
+            <img src="assets/patrocinadores_triplo.jpg" alt="Patrocinadores: ABHO, MPJ e SETC" loading="lazy" />
+            <h4>MPJ &amp; SETC</h4>
+            <p class="legal">Movimento Parauapebas de Juventude • Engenharia &amp; Rigger</p>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="venue">
+      <div class="container">
+        <h2 id="venue" style="margin:0 0 1rem">Local do Evento — Atrium Confort Hotel</h2>
+        <div class="gallery-grid">
+          <img class="zoomable" src="assets/local_atrium.jpg" alt="Auditório do Atrium Confort Hotel preparado para o evento" loading="lazy" />
+        </div>
+      </div>
+      <div class="container" style="margin-top:1.2rem">
+        <div class="card" style="padding:1rem 1.25rem">
+          <h3 style="margin:.4rem 0 1rem">Como chegar</h3>
+          <p><strong>Endereço:</strong> Av. Liberdade, 192 — Bairro da Paz — Parauapebas-PA</p>
+          <iframe class="map" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps?q=Av.+Liberdade,+192,+Parauapebas,+PA&output=embed"></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div style="display:flex; align-items:center; justify-content:space-between; gap:1rem; flex-wrap:wrap">
+        <span>© 2025 Safety Talks — I Fórum de Discussões em SST</span>
+        <a href="#inscricao" class="floating-cta">Inscreva-se</a>
+      </div>
+    </div>
+  </footer>
+
+  <div class="lightbox" id="lightbox" aria-modal="true" role="dialog">
+    <button type="button" aria-label="Fechar">Fechar ✕</button>
+    <img alt="" src="" />
+  </div>
+
+  <script>
+    const form = document.getElementById('inscricaoForm');
+    const btn = document.getElementById('btnSubmit');
+    form.addEventListener('submit', () => { btn.disabled = true; btn.textContent = 'Enviando...'; });
+
+    // Simple lightbox for gallery
+    const lb = document.getElementById('lightbox');
+    const lbImg = lb.querySelector('img');
+    document.querySelectorAll('.zoomable').forEach(img => {
+      img.addEventListener('click', () => {
+        lb.classList.add('open');
+        lbImg.src = img.src;
+        lbImg.alt = img.alt;
+      });
+    });
+    lb.addEventListener('click', (e) => { if(e.target === lb || e.target.tagName === 'BUTTON') lb.classList.remove('open'); });
+    document.addEventListener('keydown', (e) => { if(e.key === 'Escape') lb.classList.remove('open'); });
+  </script>
+</body>
+</html>

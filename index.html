@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -129,61 +128,11 @@
             <div class="kpi"><strong>Vagas Limitadas</strong><span>Inscrições mediante confirmação</span></div>
           </div>
         </div>
+
+        <!-- FORM REMOVIDO E SUBSTITUÍDO PELO MICROSOFT FORMS -->
         <div class="card form-card" id="inscricao">
           <h2 style="margin:.2rem 0 1rem">Garanta sua vaga</h2>
-          <form id="inscricaoForm" action="https://formsubmit.co/joaobatista81346@gmail.com" method="POST">
-            <input type="hidden" name="_subject" value="Inscrição — Safety Talks (I Fórum de Discussões em SST)" />
-            <input type="hidden" name="_next" value="https://nubank.com.br/cobrar/1js6yy/68e68f65-755c-48f8-86ed-5d347a316004" />
-            <input type="hidden" name="_captcha" value="false" />
-            <input type="hidden" name="_template" value="table" />
-            <div class="row">
-              <div>
-                <label for="nome">Nome completo</label>
-                <input id="nome" name="nome" placeholder="Seu nome completo" required />
-              </div>
-              <div>
-                <label for="email">E-mail</label>
-                <input id="email" name="email" type="email" placeholder="voce@empresa.com" required />
-              </div>
-            </div>
-            <div class="row">
-              <div>
-                <label for="whats">Telefone/WhatsApp</label>
-                <input id="whats" name="whatsapp" inputmode="tel" placeholder="(xx) xxxxx-xxxx" />
-              </div>
-              <div>
-                <label for="empresa">Empresa / Organização</label>
-                <input id="empresa" name="empresa" placeholder="Nome da empresa" />
-              </div>
-            </div>
-            <div class="row">
-              <div>
-                <label for="cargo">Cargo / Área</label>
-                <input id="cargo" name="cargo" placeholder="Ex.: Eng. de Segurança, Téc. de Segurança..." />
-              </div>
-              <div>
-                <label for="interesse">Interesse principal</label>
-                <select id="interesse" name="interesse">
-                  <option value="Tecnologia e Inovação">Tecnologia e Inovação</option>
-                  <option value="Gestão de Segurança">Gestão de Segurança</option>
-                  <option value="Auditorias em SST">Auditorias em SST</option>
-                  <option value="Higiene Ocupacional">Higiene Ocupacional</option>
-                </select>
-              </div>
-            </div>
-            <div>
-              <label for="mensagem">Mensagem (opcional)</label>
-              <textarea id="mensagem" name="mensagem" placeholder="Conte-nos suas expectativas ou dúvidas."></textarea>
-            </div>
-            <div style="margin:.6rem 0 1rem">
-              <label class="legal">
-                <input type="checkbox" required style="transform:translateY(2px); margin-right:.4rem"> 
-                Concordo com o tratamento dos meus dados para fins de inscrição e comunicação do evento (LGPD).
-              </label>
-            </div>
-            <button id="btnSubmit" type="submit" aria-live="polite">Enviar inscrição e ir para a página de confirmação</button>
-            <p class="legal" style="margin-top:.8rem">Após enviar, você será direcionado automaticamente para a página de confirmação.</p>
-          </form>
+          <iframe width="640px" height="480px" src="https://forms.office.com/r/sK9eYBBA2J?embed=true" frameborder="0" marginwidth="0" marginheight="0" style="border: none; max-width:100%; max-height:100vh" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen> </iframe>
         </div>
       </div>
     </section>
@@ -220,11 +169,12 @@
             <img src="assets/patrocinadores_triplo.jpg" alt="Patrocinadores: ABHO, MPJ e SETC" loading="lazy" />
             <h4>MPJ &amp; SETC</h4>
             <p class="legal">Movimento Parauapebas de Juventude • Engenharia &amp; Rigger</p>
-        </div>
-           <div class="sponsor-card">
+          </div>
+          <div class="sponsor-card">
             <img src="assets/cronograma.jpg" alt="cronograma" loading="lazy" />
             <h4>Cronograma do Evento</h4>
             <p class="legal">Veja a Programação</p>
+          </div>
         </div>
       </div>
     </section>
@@ -262,11 +212,7 @@
   </div>
 
   <script>
-    const form = document.getElementById('inscricaoForm');
-    const btn = document.getElementById('btnSubmit');
-    form.addEventListener('submit', () => { btn.disabled = true; btn.textContent = 'Enviando...'; });
-
-    // Simple lightbox for gallery
+    // Simple lightbox para a galeria
     const lb = document.getElementById('lightbox');
     const lbImg = lb.querySelector('img');
     document.querySelectorAll('.zoomable').forEach(img => {
